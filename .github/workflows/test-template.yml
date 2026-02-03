@@ -1,0 +1,40 @@
+name: Test LaTeX Template
+
+on:
+  push:
+    branches: [ main, master ]
+  pull_request:
+    branches: [ main, master ]
+  workflow_dispatch:
+
+jobs:
+  test-conferences:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        conference: [ICML, NeurIPS, UAI]
+      fail-fast: false
+    
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+      
+      - name: Set up uv
+        uses: astral-sh/setup-uv@v7
+      
+      - name: Generate project from template
+        run: |
+          uvx cookiecutter . --no-input project_slug=test-${{ matrix.conference }} conference=${{ matrix.conference }}
+      
+      - name: Compile ${{ matrix.conference }} paper
+        uses: xu-cheng/latex-action@v4
+        with:
+          root_file: main.tex
+          working_directory: test-${{ matrix.conference }}/${{ toLower(matrix.conference) }}
+      
+      - name: Upload PDF artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: ${{ matrix.conference }}-paper
+          path: test-${{ matrix.conference }}/${{ toLower(matrix.conference) }}/main.pdf
+          if-no-files-found: error
