@@ -1,0 +1,57 @@
+% !TeX root = main.tex
+\documentclass{uai2026} % for initial submission
+%\documentclass[accepted]{uai2026} % after acceptance, for a revised version
+
+% Import common configurations
+\input{../../commons/config/packages}
+\input{../../commons/config/acronyms}
+
+% Import common math commands
+\usepackage{../../commons/math_commands}
+
+\typeout{WARNING: Make sure to replace the style file with the latest version from the UAI conference.}
+
+\title{ {{cookiecutter.project_name}} }
+
+% The standard author block has changed for UAI 2026 to provide
+% more space for long author lists and allow for complex affiliations
+%
+% All author information is automatically removed by the class for the
+% anonymous submission version of your paper, so you can already add your
+% information below.
+%
+% Add authors
+\author[1]{\href{mailto:<first.author@university.edu>?Subject=Your UAI 2026 paper}{First~Author}{}}
+\author[2]{Second~Author}
+\author[1,2]{Third~Author}
+
+% Add affiliations after the authors
+\affil[1]{The University of Earth\\
+  Department of Computer Science\\
+  City, Country
+}
+\affil[2]{The Institute of Mars\\
+  Department of AI\\
+  City, Country
+}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+  Here goes the abstract of the paper.
+\end{abstract}
+
+\input{../../commons/content/0_introduction}
+
+\clearpage
+
+% References
+\bibliographystyle{plainnat}
+\bibliography{../../commons/references}
+
+% \clearpage
+% \appendix
+% \input{../../commons/content/appendix.tex}
+
+\end{document}

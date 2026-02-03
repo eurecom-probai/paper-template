@@ -1,0 +1,69 @@
+% !TeX root = main.tex
+\documentclass[]{article}
+
+% ICML-specific style file
+% Use the following line for the initial blind version submitted for review:
+\usepackage{icml2026}
+% For preprint, use
+% \usepackage[preprint]{icml2026}
+% If accepted, instead use the following line for the camera-ready submission:
+% \usepackage[accepted]{icml2026}
+\typeout{WARNING: Make sure to replace the style file with the latest version from the ICML conference.}
+
+% Import common configurations
+\input{../../commons/config/packages}
+\input{../../commons/config/acronyms}
+
+\usepackage[]{natbib}
+
+% Import common math commands
+\usepackage{../../commons/math_commands}
+
+% The \icmltitle you define below is probably too long as a header.
+% Therefore, a short form for the running title can be supplied here:
+\icmltitlerunning{
+  {{cookiecutter.project_name}}
+}
+
+\begin{document}
+
+\twocolumn[
+  \icmltitle{
+    {{cookiecutter.project_name}}
+  }
+
+  \icmlsetsymbol{equal}{*}
+
+  \begin{icmlauthorlist}
+    \icmlauthor{First Author}{affiliation1}
+    \icmlauthor{Second Author}{affiliation2}
+  \end{icmlauthorlist}
+
+  \icmlaffiliation{affiliation1}{The University of Earth}
+  \icmlaffiliation{affiliation2}{The Institute of Mars}
+
+  \icmlcorrespondingauthor{First Author}{first.author@earth.me}
+
+  \vskip 0.3in
+]
+
+\printAffiliationsAndNotice{}  % leave blank if no need to mention equal contribution
+
+\begin{abstract}
+  Here goes the abstract of the paper.
+\end{abstract}
+
+\input{../../commons/content/0_introduction}
+
+\clearpage
+
+\begin{small}
+  \bibliography{../../commons/references}
+  \bibliographystyle{icml2026}
+\end{small}
+
+% \clearpage
+% \appendix
+% \input{../../commons/content/appendix.tex}
+
+\end{document}

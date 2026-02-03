@@ -1,0 +1,22 @@
+{
+  "project_name": "A title is all you need",
+  "conference": [
+    "ICML",
+    "NeurIPS",
+    "UAI"
+  ],
+  "author_name": "Your Name",
+  "project_slug": "{{ cookiecutter.project_name.lower().replace(' ', '_').replace('-', '_') }}",
+  "conference_slug": "{{ cookiecutter.conference.lower() }}",
+  "_copy_without_render": [
+    "*.sty",
+    "*.bst",
+    "*.bib",
+    "*.cls",
+    "{{cookiecutter.project_slug}}/conferences/*/*.sty",
+    "{{cookiecutter.project_slug}}/conferences/*/*.bst",
+    "{{cookiecutter.project_slug}}/commons/*.sty",
+    "{{cookiecutter.project_slug}}/commons/*.sh",
+    "{{cookiecutter.project_slug}}/commons/*.bib"
+  ]
+}

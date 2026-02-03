@@ -1,0 +1,64 @@
+% Encoding and fonts
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{microtype}
+
+% Math packages
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsfonts}
+\usepackage{mathtools}
+\usepackage{amsthm}
+\usepackage{nicefrac}
+
+% Bibliography
+\usepackage{natbib}
+
+% Hyperlinks and colors
+\usepackage{hyperref}
+\usepackage[all]{hypcap}
+\usepackage{xcolor}
+\definecolor{teal}{HTML}{008080}
+\hypersetup{
+  colorlinks,
+  citecolor=teal,
+  linkcolor=red!80!black,
+  urlcolor=blue
+}
+
+\usepackage[capitalize,noabbrev]{cleveref}
+
+% Graphics and layout
+\usepackage{graphicx}
+\usepackage{subcaption}
+\usepackage{wrapfig}
+\usepackage{float}
+\usepackage{pdfpages}
+\usepackage{booktabs}
+
+% Text and utility packages
+\usepackage{verbatim}
+\usepackage{comment}
+\usepackage{xspace}
+
+% Glossaries and acronyms
+\usepackage[acronym,nowarn]{glossaries}
+\glsdisablehyper
+\makeglossaries
+
+% TikZ and visualization
+\usepackage{tikz,siunitx}
+\usetikzlibrary{shapes.geometric,shapes.symbols}
+
+% Colored boxes
+\usepackage{tcolorbox}
+\definecolor{mylightgray}{gray}{0.95}
+\definecolor{boxcolor}{HTML}{faf9f5}
+\newtcolorbox{mybox}{colback=mylightgray,colframe=mylightgray,top=0.8pt,bottom=0.8pt,right=1.8pt,left=1.8pt}
+
+% Todo notes (useful during development)
+\usepackage[textsize=tiny]{todonotes}
+
+% TikZ helper commands
+\newcommand{\tikzcircle}[2][red,fill=red]{\tikz[baseline=-0.5ex]\draw[#1,radius=#2] (0,0) circle ;}%
+\newcommand{\tikzsymbol}[2][circle]{\tikz[baseline=-0.5ex]\node[inner sep=2pt,shape=#1,draw,#2]{};}%
