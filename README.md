@@ -18,7 +18,7 @@ A cookiecutter template for academic papers with pre-configured setups for major
 ### Using uvx (Recommended)
 
 ```bash
-uvx cookiecutter gh:yourusername/paper-template
+uvx cookiecutter gh:eurecom-probai/paper-template
 ```
 
 Or from a local directory:
@@ -31,7 +31,7 @@ uvx cookiecutter /path/to/paper-template
 
 ```bash
 pip install cookiecutter
-cookiecutter gh:yourusername/paper-template
+cookiecutter gh:eurecom-probai/paper-template
 ```
 
 ### Adding a Conference to Existing Project
