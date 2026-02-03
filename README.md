@@ -34,6 +34,17 @@ pip install cookiecutter
 cookiecutter gh:yourusername/paper-template
 ```
 
+### Adding a Conference to Existing Project
+
+⚠️ **Use at your own risk** — This will overwrite existing files!
+
+```bash
+cd your-paper
+uvx cookiecutter /path/to/paper-template --overwrite-if-exists
+```
+
+This allows you to add or switch conference templates in an existing project. The `--overwrite-if-exists` flag will potentially replace files with the same name if you choose the same conference multiple times. **Always commit your changes to git before running this command.**
+
 ## 📋 Configuration
 
 During setup, you'll be prompted for:
@@ -69,29 +80,31 @@ After running cookiecutter, your project will have:
 
 ```
 your-paper/
-├── main.tex                   # Main LaTeX file
-├── math_commands.sty          # Custom math macros
-├── references.bib             # Bibliography
-├── clean-bibtex.sh            # BibTeX cleanup script
-├── icml2026.sty               # Conference-specific style files
-├── icml2026.bst               # (depends on chosen conference)
-├── config/
-│   ├── acronyms.tex           # Acronym definitions
-│   └── packages.tex           # Common LaTeX packages
-└── content/
-    └── 0_introduction.tex     # Paper sections
+└── icml/                      # Conference-specific directory
+    ├── main.tex                   # Main LaTeX file
+    ├── math_commands.sty          # Custom math macros
+    ├── references.bib             # Bibliography
+    ├── clean-bibtex.sh            # BibTeX cleanup script
+    ├── icml2026.sty               # Conference-specific style files
+    ├── icml2026.bst               # (depends on chosen conference)
+    ├── config/
+    │   ├── acronyms.tex           # Acronym definitions
+    │   └── packages.tex           # Common LaTeX packages
+    └── content/
+        └── 0_introduction.tex     # Paper sections
 ```
 
 ## 🔨 Usage
 
-1. **Edit content** — Write your paper sections in `content/` directory
-2. **Add references** — Update `references.bib` with your citations
-3. **Compile** — Run `pdflatex main.tex` or use your preferred LaTeX editor
-4. **Clean bibliography** — Run `./clean-bibtex.sh` when needed
+1. **Navigate to conference directory** — `cd your-paper/icml/` (or your chosen conference)
+2. **Edit content** — Write your paper sections in `content/` directory
+3. **Add references** — Update `references.bib` with your citations
+4. **Compile** — Run `pdflatex main.tex` or use your preferred LaTeX editor
+5. **Clean bibliography** — Run `./clean-bibtex.sh` when needed
 
 ## 💡 Tips
 
-- The post-generation hook flattens the structure and copies conference-specific files
+- The post-generation hook creates a conference-specific subdirectory for your chosen venue
 - Custom math commands are defined in `math_commands.sty`
 - Add acronyms to `config/acronyms.tex` for automatic expansion
 - Organize your paper sections in the `content/` directory
