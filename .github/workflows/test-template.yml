@@ -12,7 +12,13 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        conference: [ICML, NeurIPS, UAI]
+        include:
+          - conference: ICML
+            conference_lower: icml
+          - conference: NeurIPS
+            conference_lower: neurips
+          - conference: UAI
+            conference_lower: uai
       fail-fast: false
     
     steps:
@@ -30,11 +36,11 @@ jobs:
         uses: xu-cheng/latex-action@v4
         with:
           root_file: main.tex
-          working_directory: test-${{ matrix.conference }}/${{ toLower(matrix.conference) }}
+          working_directory: test-${{ matrix.conference }}/${{ matrix.conference_lower }}
       
       - name: Upload PDF artifact
         uses: actions/upload-artifact@v4
         with:
           name: ${{ matrix.conference }}-paper
-          path: test-${{ matrix.conference }}/${{ toLower(matrix.conference) }}/main.pdf
+          path: test-${{ matrix.conference }}/${{ matrix.conference_lower }}/main.pdf
           if-no-files-found: error
