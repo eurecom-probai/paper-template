@@ -1,0 +1,46 @@
+% !TeX root = main.tex
+\documentclass{article}
+
+% Import common configurations
+\PassOptionsToPackage{round}{natbib}
+\usepackage{tmlr}
+\input{../../commons/config/packages}
+\input{../../commons/config/acronyms}
+
+% Import common math commands
+\usepackage{../../commons/math_commands}
+
+\typeout{WARNING: Make sure to replace the style file with the latest version from the TMLR.}
+
+\title{
+  {{cookiecutter.project_name}}
+}
+
+\author{
+  \name Name Surname \email email@email.com \\
+  \addr University of Example, Country
+  \AND
+  \name Name Surname \email email@email.com \\
+  \addr University of Example, Country
+}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+  Here goes the abstract of the paper.
+\end{abstract}
+
+\input{../../commons/content/0_introduction}
+
+% \clearpage
+
+% References
+\bibliographystyle{tmlr}
+\bibliography{references}
+
+% \clearpage
+% \appendix
+% \input{content/appendix.tex}
+
+\end{document}
