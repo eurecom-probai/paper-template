@@ -19,6 +19,8 @@ jobs:
           #   conference_slug: neurips
           - conference: UAI
             conference_slug: uai
+          - conference: TMLR
+            conference_slug: tmlr
       fail-fast: false
     
     steps:
