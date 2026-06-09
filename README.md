@@ -4,11 +4,11 @@
 ![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
 ![License](https://img.shields.io/badge/License-MIT-green?style=for-the-badge)
 
-A cookiecutter template for academic papers with pre-configured setups for major ML conferences (ICML, NeurIPS, UAI).
+A cookiecutter template for academic papers with pre-configured setups for major ML conferences (ICML, ICLR, TMLR, UAI).
 
 ## ✨ Features
 
-- 🎯 **Multi-Conference Support** — Ready-to-use templates for ICML, NeurIPS, and UAI
+- 🎯 **Multi-Conference Support** — Ready-to-use templates for ICML, ICLR, TMLR, and UAI
 - 📚 **Organized Structure** — Common bibliography, custom math commands, and shared content
 - 🔧 **Automated Setup** — Post-generation hooks for seamless initialization
 - 🧹 **Clean BibTeX** — Included script to sanitize bibliography entries
@@ -68,7 +68,8 @@ paper-template/
 │   │       └── 0_introduction.tex
 │   └── conferences/
 │       ├── icml/
-│       ├── neurips/
+│       ├── iclr/
+│       ├── tmlr/
 │       └── uai/
 └── hooks/
     └── post_gen_project.py
@@ -80,13 +81,13 @@ After running cookiecutter, your project will have:
 
 ```
 your-paper/
-└── icml/                      # Conference-specific directory
+└── iclr/                      # Conference-specific directory
     ├── main.tex                   # Main LaTeX file
     ├── math_commands.sty          # Custom math macros
     ├── references.bib             # Bibliography
     ├── clean-bibtex.sh            # BibTeX cleanup script
-    ├── icml2026.sty               # Conference-specific style files
-    ├── icml2026.bst               # (depends on chosen conference)
+    ├── iclr2026_conference.sty    # Conference-specific style files
+    ├── iclr2026_conference.bst    # (depends on chosen conference)
     ├── config/
     │   ├── acronyms.tex           # Acronym definitions
     │   └── packages.tex           # Common LaTeX packages
@@ -96,7 +97,7 @@ your-paper/
 
 ## 🔨 Usage
 
-1. **Navigate to conference directory** — `cd your-paper/icml/` (or your chosen conference)
+1. **Navigate to conference directory** — `cd your-paper/iclr/` (or your chosen conference)
 2. **Edit content** — Write your paper sections in `content/` directory
 3. **Add references** — Update `references.bib` with your citations
 4. **Compile** — Run `pdflatex main.tex` or use your preferred LaTeX editor
