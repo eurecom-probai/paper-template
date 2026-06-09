@@ -1,0 +1,48 @@
+% !TeX root = main.tex
+\documentclass{article}
+
+% Use the following line for the initial blind version submitted for review:
+\usepackage{iclr2026_conference,times}
+% If accepted, instead use the following line for the camera-ready submission:
+% \iclrfinalcopy
+
+% Import common configurations
+\input{../../commons/config/packages}
+\input{../../commons/config/acronyms}
+
+% Import common math commands
+\usepackage{../../commons/math_commands}
+
+\typeout{WARNING: Make sure to replace the style file with the latest version from the ICLR conference.}
+
+\title{
+  {{cookiecutter.project_name}}
+}
+
+% Authors must not appear in the submitted version.
+\author{
+  First Author \\
+  Affiliation \\
+  City, Country \\
+  \texttt{first.author@example.com}
+  \And
+  Second Author \\
+  Affiliation \\
+  City, Country \\
+  \texttt{second.author@example.com}
+}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+  Here goes the abstract of the paper.
+\end{abstract}
+
+\input{../../commons/content/0_introduction}
+
+% References
+\bibliographystyle{iclr2026_conference}
+\bibliography{references}
+
+\end{document}

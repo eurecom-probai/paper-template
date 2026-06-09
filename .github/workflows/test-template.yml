@@ -15,8 +15,8 @@ jobs:
         include:
           - conference: ICML
             conference_slug: icml
-          # - conference: NeurIPS
-          #   conference_slug: neurips
+          - conference: ICLR
+            conference_slug: iclr
           - conference: UAI
             conference_slug: uai
           - conference: TMLR

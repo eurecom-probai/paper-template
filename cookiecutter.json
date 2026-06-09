@@ -2,6 +2,7 @@
   "project_name": "A title is all you need",
   "conference": [
     "ICML",
+    "ICLR",
     "TMLR",
     "UAI"
   ],
